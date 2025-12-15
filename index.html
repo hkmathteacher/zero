@@ -22,7 +22,7 @@
         model-viewer {
             width: 100%;
             height: 400px;
-            background-color: #f3f4f6; /* 淺灰色背景 */
+            background-color: #d1d5db; /* 修改：加深背景灰色 (Gray-300) */
             border-radius: 0.5rem;
             --poster-color: transparent;
             /* 將模型顯示為灰階，模仿 CAD 圖效果 */
@@ -204,14 +204,14 @@
                         
                         <!-- RoboMaster 模型 -->
                         <model-viewer 
-                            src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" 
+                            src="Mini_Robocon_Zero.glb" 
                             alt="RoboMaster 供彈機構"
                             auto-rotate 
                             camera-controls
                             touch-action="pan-y"
                             ar
                             shadow-intensity="1"
-                            class="w-full h-[400px] border border-gray-100 rounded-lg bg-gray-50"
+                            class="w-full h-[400px] border border-gray-100 rounded-lg"
                         >
                             <div class="progress-bar hide" slot="progress-bar">
                                 <div class="update-bar"></div>
@@ -265,15 +265,17 @@
                         為了讓此處的預覽正常顯示，我暫時將 src 改為一個線上模型。
                         當您使用 "Live Server" 並準備好您的檔案時，請將 src 改回 "Mini_Robocon_Zero.glb"
                     -->
+                    <!-- 修改：加入 orientation="90deg 0deg 0deg" 讓模型繞 X 軸轉 90 度 -->
                     <model-viewer 
-                        src="Mini_Robocon_Zero.glb" 
+                        src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" 
                         alt="Mini Robocon Robot" 
+                        orientation="90deg 0deg 0deg"
                         auto-rotate 
                         camera-controls 
                         touch-action="pan-y" 
                         ar 
                         shadow-intensity="1"
-                        class="w-full h-[400px] border border-gray-100 rounded-lg bg-gray-50"
+                        class="w-full h-[400px] border border-gray-100 rounded-lg"
                     >
                         <!-- 自定義錯誤訊息顯示 -->
                         <div slot="error" class="flex flex-col items-center justify-center w-full h-full text-gray-500 bg-gray-100 text-center p-4">
@@ -348,13 +350,14 @@
                         <h3 class="font-bold text-lg">機械手臂夾爪</h3>
                         <p class="text-xs text-gray-500">工具：Fusion 360</p>
                     </div>
+                    <!-- 修改：統一背景顏色為 #d1d5db -->
                     <model-viewer 
                         src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
                         alt="機械手臂"
                         auto-rotate 
                         camera-controls 
                         shadow-intensity="1"
-                        style="height: 300px; width: 100%; background-color: #e5e7eb;">
+                        style="height: 300px; width: 100%; background-color: #d1d5db;">
                     </model-viewer>
                     <div class="p-4">
                         <p class="text-gray-600 text-sm">
@@ -369,12 +372,13 @@
                         <h3 class="font-bold text-lg">全向輪底盤 (Omni-wheel)</h3>
                         <p class="text-xs text-gray-500">工具：SolidWorks</p>
                     </div>
+                    <!-- 修改：統一背景顏色為 #d1d5db -->
                     <model-viewer 
                         src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" 
                         alt="全向輪底盤"
                         camera-controls 
                         shadow-intensity="1"
-                        style="height: 300px; width: 100%; background-color: #e5e7eb;">
+                        style="height: 300px; width: 100%; background-color: #d1d5db;">
                     </model-viewer>
                     <div class="p-4">
                         <p class="text-gray-600 text-sm">
@@ -389,12 +393,13 @@
                         <h3 class="font-bold text-lg">Arduino 智能小車外殼</h3>
                         <p class="text-xs text-gray-500">工具：Tinkercad / Cura</p>
                     </div>
+                    <!-- 修改：統一背景顏色為 #d1d5db -->
                     <model-viewer 
                         src="https://modelviewer.dev/shared-assets/models/AlphaBlendModeTest.glb" 
                         alt="外殼設計"
                         camera-controls 
                         shadow-intensity="1"
-                        style="height: 300px; width: 100%; background-color: #e5e7eb;">
+                        style="height: 300px; width: 100%; background-color: #d1d5db;">
                     </model-viewer>
                     <div class="p-4">
                         <p class="text-gray-600 text-sm">
@@ -460,4 +465,3 @@
     </script>
 </body>
 </html>
-
